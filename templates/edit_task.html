@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Task</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .edit-form {
+        width: 500px;
+        padding: 20px;
+        background-color: rgba(226, 182, 89, 0.5);
+        border: 1px solid rgba(226, 182, 89, 0.5);
+        border-radius: 5px;
+      }
+
+      .edit-form input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        border-color: black;
+      }
+
+      .edit-form button {
+        background-color: #bbe5f2;
+        color: #1e1c7e;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .edit-form button:hover {
+        background-color: #ecf996a5;
+        color: #1e1c7e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="edit-form">
+        <h1>Edit Task</h1>
+        <form action="" method="POST">
+          <input
+            type="text"
+            name="new_task_name"
+            value="{{ task.name }}"
+            required
+          />
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
